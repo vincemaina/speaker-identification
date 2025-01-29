@@ -1,10 +1,9 @@
 import joblib
-from pathlib import Path
+from urllib.request import urlopen
 from flask import Flask
 app = Flask(__name__)
 
-# Ensure we get the correct path
-model = joblib.load("https://speaker-identification.vercel.app/svm.plk")  # Load model with preprocessing
+model = joblib.load(urlopen("https://speaker-identification.vercel.app/svm.plk"))
 
 @app.route("/api/python")
 def hello_world():
