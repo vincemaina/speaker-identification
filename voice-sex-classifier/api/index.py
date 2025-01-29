@@ -2,6 +2,7 @@ import joblib
 from flask import Flask
 import requests
 import os
+import io
 
 app = Flask(__name__)
 
@@ -23,11 +24,9 @@ def download_model():
 def hello_world():
     print("Reached here")
     
-    # Download model on startup
-    download_model()
-
-    # Load model
-    model = joblib.load(MODEL_PATH)
+    response = requests.get(MODEL_URL)
+    model = joblib.load(io.BytesIO(response.content))
+    
     print(type(model))
     return f"Model: {model}"
 
