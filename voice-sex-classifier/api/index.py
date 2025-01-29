@@ -18,16 +18,16 @@ def download_model():
         print("Download complete.")
     else:
         print("Model already downloaded.")
-        
-# Download model on startup
-download_model()
-
-# Load model
-model = joblib.load(MODEL_PATH)
 
 @app.route("/api/python")
 def hello_world():
     print("Reached here")
+    
+    # Download model on startup
+    download_model()
+
+    # Load model
+    model = joblib.load(MODEL_PATH)
     print(type(model))
     return f"Model: {model}"
 
