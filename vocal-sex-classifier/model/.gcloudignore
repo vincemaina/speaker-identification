@@ -1,0 +1,7 @@
+*.ipynb
+.venv/
+
+# Ignore logs and cache files
+*.log
+__pycache__/
+*.pyc
