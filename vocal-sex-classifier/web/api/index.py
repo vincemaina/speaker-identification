@@ -68,10 +68,6 @@ def extract_features(audio_file):
 
     return stats
 
-# Example usage
-features = extract_features("example_audio.wav")
-print(features)
-
 @app.route("/api/python")
 def hello_world():
     return "<p>Hello, World!</p>"
