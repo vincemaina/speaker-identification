@@ -1,9 +1,9 @@
 {
-  "name": "voice-sex-classifier",
+  "name": "web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "flask-dev": "set FLASK_DEBUG=1 && pip install -r requirements.txt && python -m flask --app api/index run -p 5328",
+    "flask-dev": "FLASK_DEBUG=1 && pip install -r requirements.txt && python -m flask --app api/index run -p 5328",
     "next-dev": "next dev --turbopack",
     "dev": "concurrently \"npm run next-dev\" \"npm run flask-dev\"",
     "build": "next build",
@@ -25,7 +25,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "@eslint/eslintrc": "^3",
-    "concurrently": "^8.0.1",
-    "autoprefixer": "10.4.14"
+    "autoprefixer": "10.4.14",
+    "concurrently": "^8.0.1"
   }
 }
