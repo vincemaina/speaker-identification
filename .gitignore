@@ -1,4 +1,6 @@
-.venv
+**/.venv
 datasets
 .vercel
-__pycache__/
+**/__pycache__/
+
+**/*.csv
